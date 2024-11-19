@@ -19,7 +19,6 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-        kk_rct.move_ip((-1, 0))
         key_lst = pg.key.get_pressed()
         # if key_lst[pg.K_UP]:#上矢印キーが押されたら
         #     kk_rct.move_ip((0, -1))
@@ -29,7 +28,7 @@ def main():
         #     kk_rct.move_ip((-1, 0))
         # if key_lst[pg.K_RIGHT]:#右矢印キーが押されたら    
         #     kk_rct.move_ip((2, 0))
-        kk_rct.move_ip((-key_lst[pg.K_LEFT] + (key_lst[pg.K_RIGHT] * 2),
+        kk_rct.move_ip((- 1 -key_lst[pg.K_LEFT] + (key_lst[pg.K_RIGHT] * 2),
                          -key_lst[pg.K_UP] + key_lst[pg.K_DOWN]))
         
 
